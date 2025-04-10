@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "3b8ed06e-518f-44b9-8121-26be90433da5",
+		"name": "Project Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10447686",
+		"_collection_link": "https://speeding-desert-8468.postman.co/workspace/d268de9d-dadb-436f-955c-cc06e45e37f6/collection/10447686-3b8ed06e-518f-44b9-8121-26be90433da5?action=share&source=collection_link&creator=10447686"
+	},
+	"item": [
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user_test@example.com\",\r\n  \"password\": \"password1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user_test@example.com\",\r\n  \"password\": \"password1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My First Project\",\r\n  \"description\": \"This is a test project.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/projects/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"projects",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Project",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My First Project Updates\",\r\n  \"description\": \"This is a test project.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/projects/update/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"projects",
+						"update",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Project",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/projects/delete/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"projects",
+						"delete",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Project",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/projects/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tasks",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"project_id\": 12,\r\n  \"title\": \"Write API documentation\",\r\n  \"description\": \"Document all API endpoints for the project.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/tasks/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"tasks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Tasks",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"project_id\": 12,\r\n  \"title\": \"Write API documentation\",\r\n  \"description\": \"Document all API endpoints for the project.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/tasks/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"tasks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Remarks",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"remark\": \"Worked on JWT and validation.\",\r\n  \"remark_date\": \"2025-04-10\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/tasks/remark/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"tasks",
+						"remark",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Task Remarks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/tasks/remarks/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"tasks",
+						"remarks",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task Reports",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UiLCJpYXQiOjE3NDQzMDI5MjcsImV4cCI6MTc0NDMwNjUyNywiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6InVzZXJfdGVzdEBleGFtcGxlLmNvbSJ9fQ.yRiF_IBctUO1ovVBIQPhSTXbmvFZEn77d4iZGgiekv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Code/api/tasks/report/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Code",
+						"api",
+						"tasks",
+						"report",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
